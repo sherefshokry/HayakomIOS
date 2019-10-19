@@ -16,6 +16,8 @@ class ChatVC : UIViewController {
     @IBOutlet weak var indicator : UIActivityIndicatorView!
     @IBOutlet weak var textView : UITextView!
     @IBOutlet weak var messageBottomBarView : UIView!
+    @IBOutlet weak var dotsView  : DotsLoader!
+    @IBOutlet weak var dotsHeightConstranit : NSLayoutConstraint!
     @IBOutlet weak var userNameLbl : UILabel!
     @IBOutlet weak var userImg : UIImageView!
     var senderUserId = 100
@@ -26,22 +28,21 @@ class ChatVC : UIViewController {
     var status = false
     override func viewDidLoad() {
         super.viewDidLoad()
-     
         hideKeyboardWhenTappedAround()
         setReciverUserData()
         calcCollectionId()
-        listenToNewMessage()
         fetchChatMessages()
+        listenToNewMessage()
         textView.delegate = self
-       
     }
-    
     
     func listenToNewMessage(){
         let db = Firestore.firestore()
         db.collection("Chat").document("messages").collection(collectionId)
             .addSnapshotListener(includeMetadataChanges: true) { documentSnapshot, error in
-                if self.status {
+             if self.status {
+                   self.dotsView.isHidden = false
+                   self.dotsHeightConstranit.constant = 30
                    self.fetchChatMessages()
                 }
                
@@ -114,6 +115,9 @@ class ChatVC : UIViewController {
             if let err = error {
                 print("Error getting documents: \(err)")
             } else {
+                
+                self.dotsView.isHidden = true
+                self.dotsHeightConstranit.constant = 0
                 for document in snapShot!.documents {
                     print("\(document.documentID) => \(document.data())")
                     let message = Message.init(dict: document.data())
@@ -170,8 +174,9 @@ class ChatVC : UIViewController {
     
     @IBAction func sendMessage(_ sender : UIButton){
         
-        
-        if textView.text.count > 0 {
+        if !textView.text.trimmingCharacters(in: .whitespaces).isEmpty {
+            
+            
             let mockUser = User(UserId: 100, UserName: "shokoko", gender: "male", ImagePath: "fdf", Email: "shokry@yahoo.com")
             let mockReciverUser = User(UserId: 99, UserName: "shetooz", gender: "female", ImagePath: "fdf", Email: "shokry@yahoo.com")
             

@@ -115,14 +115,12 @@ extension Date {
             return "a moment ago"
 
         }
-
     }
-    
     
     
     func getDateString()->String{
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm:ss yyyy-MM-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
         dateFormatter.locale = NSLocale(localeIdentifier: "ar") as Locale
         return  dateFormatter.string(from: self)
     }

@@ -289,7 +289,7 @@
                                 <rect key="frame" x="197" y="358" width="20" height="20"/>
                                 <color key="color" red="0.96078431369999995" green="0.70196078429999997" blue="0.4823529412" alpha="1" colorSpace="deviceRGB"/>
                             </activityIndicatorView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-JH-Vhy" customClass="CardView" customModule="Feed" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ngl-JH-Vhy" customClass="CardView" customModule="_ayakomApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="84" width="374" height="46"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rLJ-MQ-QLh">
@@ -579,15 +579,37 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="drobShadow" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gS-B0-Df4" customClass="DotsLoader" customModule="_ayakomApp" customModuleProvider="target">
+                                <rect key="frame" x="157" y="686" width="100" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Bqq-6P-bz6"/>
+                                    <constraint firstAttribute="height" id="HS3-Tu-BUw"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="dotsSpacing">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HBK-jH-UJ2" firstAttribute="top" secondItem="Vws-Qd-DBN" secondAttribute="bottom" id="15U-TW-ZMT"/>
+                            <constraint firstItem="2gS-B0-Df4" firstAttribute="top" secondItem="HBK-jH-UJ2" secondAttribute="bottom" id="GQw-0L-peD"/>
                             <constraint firstItem="hSs-gM-4RE" firstAttribute="trailing" secondItem="o6g-bp-VrZ" secondAttribute="trailing" id="HKR-dp-Xll"/>
+                            <constraint firstItem="o6g-bp-VrZ" firstAttribute="top" secondItem="2gS-B0-Df4" secondAttribute="bottom" id="Hnm-qA-N19"/>
                             <constraint firstItem="3Xa-kS-t9M" firstAttribute="centerX" secondItem="5Za-Rd-ZJf" secondAttribute="centerX" id="II8-Oh-Xdz"/>
                             <constraint firstItem="hSs-gM-4RE" firstAttribute="bottom" secondItem="o6g-bp-VrZ" secondAttribute="bottom" id="Nvw-3a-aJC"/>
-                            <constraint firstItem="hSs-gM-4RE" firstAttribute="bottom" secondItem="HBK-jH-UJ2" secondAttribute="bottom" constant="50" id="QOM-4P-Nal"/>
                             <constraint firstItem="3Xa-kS-t9M" firstAttribute="centerY" secondItem="5Za-Rd-ZJf" secondAttribute="centerY" id="Su5-8t-AOR"/>
+                            <constraint firstItem="2gS-B0-Df4" firstAttribute="centerX" secondItem="5Za-Rd-ZJf" secondAttribute="centerX" id="Tzt-H7-fe3"/>
                             <constraint firstItem="Vws-Qd-DBN" firstAttribute="top" secondItem="hSs-gM-4RE" secondAttribute="top" id="aJr-cL-3xp"/>
                             <constraint firstItem="Vws-Qd-DBN" firstAttribute="leading" secondItem="5Za-Rd-ZJf" secondAttribute="leading" id="dCj-iX-7vo"/>
                             <constraint firstItem="o6g-bp-VrZ" firstAttribute="leading" secondItem="hSs-gM-4RE" secondAttribute="leading" id="i1l-AJ-D9A"/>
@@ -598,6 +620,8 @@
                         <viewLayoutGuide key="safeArea" id="hSs-gM-4RE"/>
                     </view>
                     <connections>
+                        <outlet property="dotsHeightConstranit" destination="HS3-Tu-BUw" id="DzF-Dk-oRc"/>
+                        <outlet property="dotsView" destination="2gS-B0-Df4" id="ZXE-X6-VhE"/>
                         <outlet property="indicator" destination="3Xa-kS-t9M" id="wPj-cp-QbP"/>
                         <outlet property="messageBottomBarView" destination="o6g-bp-VrZ" id="OSs-sz-zmj"/>
                         <outlet property="tableView" destination="HBK-jH-UJ2" id="c1y-xQ-6C3"/>
@@ -608,7 +632,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4J2-58-pvS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1855.2" y="1487.4062968515743"/>
+            <point key="canvasLocation" x="-1856.521739130435" y="1486.9565217391305"/>
         </scene>
         <!--تنبيهات-->
         <scene sceneID="d8G-Tk-rDF">

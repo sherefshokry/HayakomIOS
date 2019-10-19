@@ -836,13 +836,72 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yla-KE-Y7F">
+                                                <rect key="frame" x="311" y="120.5" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="16" id="Qej-zP-YcW"/>
+                                                    <constraint firstAttribute="width" constant="16" id="S4O-UE-F5g"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الجمعة  21 سبتمبر 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u37-WA-FWN">
+                                                <rect key="frame" x="171" y="116" width="132" height="25"/>
+                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
+                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فندق راديسون بلو الكويت" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caB-ho-6hO">
+                                                <rect key="frame" x="163.5" y="162" width="139.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
+                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-QK-rmy">
+                                                <rect key="frame" x="311" y="166.5" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="7uS-aB-slM"/>
+                                                    <constraint firstAttribute="height" constant="16" id="VQl-LX-W1B"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location_Colored" translatesAutoresizingMaskIntoConstraints="NO" id="egx-tF-z1n">
+                                                <rect key="frame" x="311" y="212.5" width="16" height="16"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="16" id="o4H-mc-WmZ"/>
+                                                    <constraint firstAttribute="height" constant="16" id="p7E-Hd-Gup"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المضيف لويس فوكس" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOz-q1-nFa">
+                                                <rect key="frame" x="180" y="208" width="123" height="25"/>
+                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
+                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:30 مساء - 3:30 مساء" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJY-BA-3cF">
+                                                <rect key="frame" x="175" y="149" width="128" height="25"/>
+                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
+                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstItem="u37-WA-FWN" firstAttribute="centerY" secondItem="yla-KE-Y7F" secondAttribute="centerY" id="2RI-t1-KJQ"/>
+                                            <constraint firstItem="yla-KE-Y7F" firstAttribute="leading" secondItem="u37-WA-FWN" secondAttribute="trailing" constant="8" id="32R-uf-cUd"/>
                                             <constraint firstAttribute="trailing" secondItem="hw0-3d-VZ2" secondAttribute="trailing" constant="16" id="3Zt-L9-H67"/>
+                                            <constraint firstAttribute="trailing" secondItem="jx1-QK-rmy" secondAttribute="trailing" constant="16" id="6Qh-cU-eBH"/>
+                                            <constraint firstItem="yla-KE-Y7F" firstAttribute="top" secondItem="hw0-3d-VZ2" secondAttribute="bottom" constant="20" id="DWH-jB-F5y"/>
                                             <constraint firstAttribute="height" constant="1010" id="G2M-4g-FSI"/>
+                                            <constraint firstItem="jx1-QK-rmy" firstAttribute="top" secondItem="yla-KE-Y7F" secondAttribute="bottom" constant="30" id="Gob-M5-0kB"/>
+                                            <constraint firstAttribute="trailing" secondItem="yla-KE-Y7F" secondAttribute="trailing" constant="16" id="HxK-5B-ntX"/>
+                                            <constraint firstItem="egx-tF-z1n" firstAttribute="leading" secondItem="TOz-q1-nFa" secondAttribute="trailing" constant="8" id="Th5-hn-SRV"/>
+                                            <constraint firstItem="TOz-q1-nFa" firstAttribute="centerY" secondItem="egx-tF-z1n" secondAttribute="centerY" id="Tjo-Ho-Hb6"/>
+                                            <constraint firstItem="caB-ho-6hO" firstAttribute="centerY" secondItem="jx1-QK-rmy" secondAttribute="centerY" id="UPt-Sc-SyE"/>
+                                            <constraint firstItem="GJY-BA-3cF" firstAttribute="trailing" secondItem="u37-WA-FWN" secondAttribute="trailing" id="aWz-Fp-RJk"/>
+                                            <constraint firstItem="GJY-BA-3cF" firstAttribute="top" secondItem="u37-WA-FWN" secondAttribute="bottom" constant="8" id="d02-C7-419"/>
+                                            <constraint firstAttribute="trailing" secondItem="egx-tF-z1n" secondAttribute="trailing" constant="16" id="iBr-xq-yc4"/>
                                             <constraint firstItem="hw0-3d-VZ2" firstAttribute="leading" secondItem="b6Y-mx-2Fr" secondAttribute="leading" constant="16" id="l1q-As-PdT"/>
+                                            <constraint firstItem="jx1-QK-rmy" firstAttribute="leading" secondItem="caB-ho-6hO" secondAttribute="trailing" constant="8" id="uUj-sq-huG"/>
                                             <constraint firstItem="hw0-3d-VZ2" firstAttribute="top" secondItem="b6Y-mx-2Fr" secondAttribute="top" constant="16" id="wSX-AU-IY6"/>
+                                            <constraint firstItem="egx-tF-z1n" firstAttribute="top" secondItem="jx1-QK-rmy" secondAttribute="bottom" constant="30" id="zbV-4j-gxR"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -945,7 +1004,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Location" width="10" height="14"/>
+        <image name="Location_Colored" width="8" height="14"/>
         <image name="No_Events" width="225" height="187"/>
+        <image name="calendar" width="12" height="12"/>
         <image name="ic_back" width="24" height="13"/>
         <image name="ic_fav" width="32" height="32"/>
         <image name="ic_location" width="10" height="14"/>

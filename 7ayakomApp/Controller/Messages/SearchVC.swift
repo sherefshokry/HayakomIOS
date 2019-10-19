@@ -125,9 +125,13 @@ extension SearchVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let vc = ChatVC.instantiateFromStoryBoard(appStoryBoard: .Home)
-               vc.reciverUser = userList[indexPath.row]
-               self.present(vc, animated: true, completion: nil)
+        
+          if indicator.isHidden {
+            let vc = ChatVC.instantiateFromStoryBoard(appStoryBoard: .Home)
+            vc.reciverUser = userList[indexPath.row]
+            self.present(vc, animated: true, completion: nil)
+        }
+       
     }
     
 }

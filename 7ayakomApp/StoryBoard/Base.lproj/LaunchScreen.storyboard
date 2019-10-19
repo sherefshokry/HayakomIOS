@@ -15,7 +15,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Nqe-hc-ucU">
+                                <rect key="frame" x="87.5" y="233.5" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KW0-ba-fIf"/>
+                                    <constraint firstAttribute="width" constant="200" id="VdH-28-kf4"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Nqe-hc-ucU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4nR-XZ-YVz"/>
+                            <constraint firstItem="Nqe-hc-ucU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="YA0-g0-b2T"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -24,4 +37,7 @@
             <point key="canvasLocation" x="-47" y="379"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash" width="682" height="682"/>
+    </resources>
 </document>
