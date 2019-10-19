@@ -255,5 +255,4 @@ extension ChatVC : UITextViewDelegate {
        // textView.resignFirstResponder()
     }
 
-    
 }
