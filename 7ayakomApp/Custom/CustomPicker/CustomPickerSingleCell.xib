@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Swissra Normal.otf">
+            <string>Swissra-Normal</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="52" id="KGk-i7-Jjw" customClass="CustomPickerSingleCell" customModule="A3maly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="444" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="444" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5HS-Rz-ydj" customClass="CardView" customModule="DareYourBody" customModuleProvider="target">
+                        <rect key="frame" x="20" y="8" width="404" height="49.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJe-z9-Fe2">
+                                <rect key="frame" x="349.5" y="15" width="34.5" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="19" id="Hq4-zL-nBN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Swissra-Normal" family="Swissra-Normal" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PJe-z9-Fe2" firstAttribute="centerY" secondItem="5HS-Rz-ydj" secondAttribute="centerY" id="HdV-ZN-Y7J"/>
+                            <constraint firstAttribute="height" constant="49.5" id="Mhg-0H-Ufh"/>
+                            <constraint firstItem="PJe-z9-Fe2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5HS-Rz-ydj" secondAttribute="leading" constant="20" id="dkP-TT-7CM"/>
+                            <constraint firstAttribute="trailing" secondItem="PJe-z9-Fe2" secondAttribute="trailing" constant="20" id="kbv-Zl-3hm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rsb-TF-Oqc"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="5HS-Rz-ydj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="5R2-gZ-gSA"/>
+                    <constraint firstAttribute="bottom" secondItem="5HS-Rz-ydj" secondAttribute="bottom" constant="8" id="Bhz-ex-PKD"/>
+                    <constraint firstAttribute="trailing" secondItem="5HS-Rz-ydj" secondAttribute="trailing" constant="20" id="lFS-cf-wjP"/>
+                    <constraint firstItem="5HS-Rz-ydj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qsf-aU-WHP"/>
+                    <constraint firstItem="5HS-Rz-ydj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="rfE-r5-gJc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="container" destination="5HS-Rz-ydj" id="e85-bG-wti"/>
+                <outlet property="titleLbl" destination="PJe-z9-Fe2" id="Imj-VU-sJT"/>
+            </connections>
+            <point key="canvasLocation" x="310" y="117"/>
+        </tableViewCell>
+    </objects>
+</document>

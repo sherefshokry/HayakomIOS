@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCollectionViewCell" id="feD-6C-Vuf" customClass="InterestCollectionViewCell" customModule="_IAKOM" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SKF-wr-LOB">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="64"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.8980392157" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="deviceRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp5-XL-XhY">
+                        <rect key="frame" x="0.0" y="0.0" width="272" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="6YZ-wn-sss"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="hAe-az-niL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.37647058820000001" blue="0.61568627450000002" alpha="1" colorSpace="deviceRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lgf-MA-URf">
+                        <rect key="frame" x="253" y="27.5" width="9" height="9"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="9" id="Js5-xa-uww"/>
+                            <constraint firstAttribute="height" constant="9" id="law-Lb-GTY"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.54901960780000003" green="0.60784313729999995" blue="0.64313725489999995" alpha="1" colorSpace="deviceRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Lgf-MA-URf" secondAttribute="trailing" constant="10" id="6Bm-il-Jdg"/>
+                <constraint firstAttribute="trailing" secondItem="Lp5-XL-XhY" secondAttribute="trailing" id="JXJ-wZ-BmM"/>
+                <constraint firstAttribute="bottom" secondItem="Lp5-XL-XhY" secondAttribute="bottom" id="R94-dj-IrY"/>
+                <constraint firstItem="SKF-wr-LOB" firstAttribute="leading" secondItem="5lW-c8-qMb" secondAttribute="leading" id="Saj-9T-5oa"/>
+                <constraint firstItem="Lp5-XL-XhY" firstAttribute="top" secondItem="feD-6C-Vuf" secondAttribute="top" id="U73-UK-5nK"/>
+                <constraint firstItem="Lp5-XL-XhY" firstAttribute="leading" secondItem="feD-6C-Vuf" secondAttribute="leading" id="WTv-tG-psp"/>
+                <constraint firstItem="SKF-wr-LOB" firstAttribute="height" secondItem="Lp5-XL-XhY" secondAttribute="height" id="XRc-GC-kVR"/>
+                <constraint firstItem="SKF-wr-LOB" firstAttribute="trailing" secondItem="Lgf-MA-URf" secondAttribute="trailing" constant="10" id="XZm-bD-lb5"/>
+                <constraint firstItem="SKF-wr-LOB" firstAttribute="centerY" secondItem="Lp5-XL-XhY" secondAttribute="centerY" id="esh-8t-RQV"/>
+                <constraint firstItem="Lgf-MA-URf" firstAttribute="centerY" secondItem="feD-6C-Vuf" secondAttribute="centerY" id="pcH-VD-D2d"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="5lW-c8-qMb"/>
+            <size key="customSize" width="272" height="64"/>
+            <connections>
+                <outlet property="backView" destination="SKF-wr-LOB" id="TV1-Qz-ltD"/>
+                <outlet property="dotView" destination="Lgf-MA-URf" id="WG5-4K-WEs"/>
+                <outlet property="maxWidth" destination="6YZ-wn-sss" id="uL0-F1-8H1"/>
+                <outlet property="nameLbl" destination="Lp5-XL-XhY" id="EXU-cp-wTM"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

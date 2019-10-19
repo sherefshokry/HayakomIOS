@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>130339409102-i67g8ogd09ru736e2n5vvtdpfr8un3ao.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.130339409102-i67g8ogd09ru736e2n5vvtdpfr8un3ao</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>130339409102-rar9013jk7uljcebjjb5429fuam595al.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBKooZiJrqpYAgclcKEyP8TFueeykSxI7w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>130339409102</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.NAT.7ayakomApp</string>
+	<key>PROJECT_ID</key>
+	<string>hayakom-ae743</string>
+	<key>STORAGE_BUCKET</key>
+	<string>hayakom-ae743.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:130339409102:ios:e82978a3311f58cb8b949f</string>
+	<key>DATABASE_URL</key>
+	<string>https://hayakom-ae743.firebaseio.com</string>
+</dict>
+</plist>
