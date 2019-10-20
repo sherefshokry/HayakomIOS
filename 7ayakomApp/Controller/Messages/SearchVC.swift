@@ -136,7 +136,7 @@ extension SearchVC : UITableViewDelegate , UITableViewDataSource {
     
 }
 extension SearchVC : UITextFieldDelegate {
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          textField.resignFirstResponder()
          page = 0
@@ -145,6 +145,5 @@ extension SearchVC : UITextFieldDelegate {
          searchUsersByName()
        return true
     }
-
 }
 

@@ -798,13 +798,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-9O-QZy">
-                                                <rect key="frame" x="319" y="19" width="32" height="32"/>
+                                                <rect key="frame" x="287" y="3" width="64" height="64"/>
                                                 <state key="normal" image="ic_fav">
                                                     <color key="titleColor" red="0.0" green="0.37647058820000001" blue="0.61568627450000002" alpha="1" colorSpace="deviceRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxl-dV-Tlm">
-                                                <rect key="frame" x="24" y="24" width="24" height="22"/>
+                                                <rect key="frame" x="24" y="22" width="48" height="26"/>
                                                 <state key="normal" image="ic_back">
                                                     <color key="titleColor" red="0.0" green="0.37647058820000001" blue="0.61568627450000002" alpha="1" colorSpace="deviceRGB"/>
                                                 </state>
@@ -827,81 +827,9 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-mx-2Fr" customClass="AllSidsCardView" customModule="_ayakomApp" customModuleProvider="target">
                                         <rect key="frame" x="16" y="140" width="343" height="1010"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-3d-VZ2">
-                                                <rect key="frame" x="16" y="16" width="311" height="84.5"/>
-                                                <string key="text">مهرجان الكويت الدولي
-لموسيقى الجاز</string>
-                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-65Bold" family="Frutiger LT Arabic" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yla-KE-Y7F">
-                                                <rect key="frame" x="311" y="120.5" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="Qej-zP-YcW"/>
-                                                    <constraint firstAttribute="width" constant="16" id="S4O-UE-F5g"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الجمعة  21 سبتمبر 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u37-WA-FWN">
-                                                <rect key="frame" x="171" y="116" width="132" height="25"/>
-                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
-                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فندق راديسون بلو الكويت" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caB-ho-6hO">
-                                                <rect key="frame" x="163.5" y="162" width="139.5" height="25"/>
-                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
-                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-QK-rmy">
-                                                <rect key="frame" x="311" y="166.5" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="7uS-aB-slM"/>
-                                                    <constraint firstAttribute="height" constant="16" id="VQl-LX-W1B"/>
-                                                </constraints>
-                                            </imageView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location_Colored" translatesAutoresizingMaskIntoConstraints="NO" id="egx-tF-z1n">
-                                                <rect key="frame" x="311" y="212.5" width="16" height="16"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="o4H-mc-WmZ"/>
-                                                    <constraint firstAttribute="height" constant="16" id="p7E-Hd-Gup"/>
-                                                </constraints>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المضيف لويس فوكس" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOz-q1-nFa">
-                                                <rect key="frame" x="180" y="208" width="123" height="25"/>
-                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
-                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:30 مساء - 3:30 مساء" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJY-BA-3cF">
-                                                <rect key="frame" x="175" y="149" width="128" height="25"/>
-                                                <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
-                                                <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="u37-WA-FWN" firstAttribute="centerY" secondItem="yla-KE-Y7F" secondAttribute="centerY" id="2RI-t1-KJQ"/>
-                                            <constraint firstItem="yla-KE-Y7F" firstAttribute="leading" secondItem="u37-WA-FWN" secondAttribute="trailing" constant="8" id="32R-uf-cUd"/>
-                                            <constraint firstAttribute="trailing" secondItem="hw0-3d-VZ2" secondAttribute="trailing" constant="16" id="3Zt-L9-H67"/>
-                                            <constraint firstAttribute="trailing" secondItem="jx1-QK-rmy" secondAttribute="trailing" constant="16" id="6Qh-cU-eBH"/>
-                                            <constraint firstItem="yla-KE-Y7F" firstAttribute="top" secondItem="hw0-3d-VZ2" secondAttribute="bottom" constant="20" id="DWH-jB-F5y"/>
                                             <constraint firstAttribute="height" constant="1010" id="G2M-4g-FSI"/>
-                                            <constraint firstItem="jx1-QK-rmy" firstAttribute="top" secondItem="yla-KE-Y7F" secondAttribute="bottom" constant="30" id="Gob-M5-0kB"/>
-                                            <constraint firstAttribute="trailing" secondItem="yla-KE-Y7F" secondAttribute="trailing" constant="16" id="HxK-5B-ntX"/>
-                                            <constraint firstItem="egx-tF-z1n" firstAttribute="leading" secondItem="TOz-q1-nFa" secondAttribute="trailing" constant="8" id="Th5-hn-SRV"/>
-                                            <constraint firstItem="TOz-q1-nFa" firstAttribute="centerY" secondItem="egx-tF-z1n" secondAttribute="centerY" id="Tjo-Ho-Hb6"/>
-                                            <constraint firstItem="caB-ho-6hO" firstAttribute="centerY" secondItem="jx1-QK-rmy" secondAttribute="centerY" id="UPt-Sc-SyE"/>
-                                            <constraint firstItem="GJY-BA-3cF" firstAttribute="trailing" secondItem="u37-WA-FWN" secondAttribute="trailing" id="aWz-Fp-RJk"/>
-                                            <constraint firstItem="GJY-BA-3cF" firstAttribute="top" secondItem="u37-WA-FWN" secondAttribute="bottom" constant="8" id="d02-C7-419"/>
-                                            <constraint firstAttribute="trailing" secondItem="egx-tF-z1n" secondAttribute="trailing" constant="16" id="iBr-xq-yc4"/>
-                                            <constraint firstItem="hw0-3d-VZ2" firstAttribute="leading" secondItem="b6Y-mx-2Fr" secondAttribute="leading" constant="16" id="l1q-As-PdT"/>
-                                            <constraint firstItem="jx1-QK-rmy" firstAttribute="leading" secondItem="caB-ho-6hO" secondAttribute="trailing" constant="8" id="uUj-sq-huG"/>
-                                            <constraint firstItem="hw0-3d-VZ2" firstAttribute="top" secondItem="b6Y-mx-2Fr" secondAttribute="top" constant="16" id="wSX-AU-IY6"/>
-                                            <constraint firstItem="egx-tF-z1n" firstAttribute="top" secondItem="jx1-QK-rmy" secondAttribute="bottom" constant="30" id="zbV-4j-gxR"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -918,18 +846,106 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hw0-3d-VZ2">
+                                        <rect key="frame" x="32" y="156" width="311" height="51.5"/>
+                                        <string key="text">مهرجان الكويت الدولي
+لموسيقى الجاز</string>
+                                        <fontDescription key="fontDescription" name="FrutigerLTArabic-65Bold" family="Frutiger LT Arabic" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yla-KE-Y7F">
+                                        <rect key="frame" x="327" y="227.5" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="Qej-zP-YcW"/>
+                                            <constraint firstAttribute="width" constant="16" id="S4O-UE-F5g"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="الجمعة  21 سبتمبر 2018" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u37-WA-FWN">
+                                        <rect key="frame" x="197" y="224" width="122" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="12"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:30 مساء - 3:30 مساء" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GJY-BA-3cF">
+                                        <rect key="frame" x="201" y="247.5" width="118" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="12"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="jx1-QK-rmy">
+                                        <rect key="frame" x="327" y="273.5" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="7uS-aB-slM"/>
+                                            <constraint firstAttribute="height" constant="16" id="VQl-LX-W1B"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="فندق راديسون بلو الكويت" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caB-ho-6hO">
+                                        <rect key="frame" x="186" y="270" width="129" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="12"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Location_Colored" translatesAutoresizingMaskIntoConstraints="NO" id="egx-tF-z1n">
+                                        <rect key="frame" x="327" y="319.5" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="16" id="o4H-mc-WmZ"/>
+                                            <constraint firstAttribute="height" constant="16" id="p7E-Hd-Gup"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="المضيف لويس فوكس" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TOz-q1-nFa">
+                                        <rect key="frame" x="201.5" y="316" width="113.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="12"/>
+                                        <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsQ-S0-gao">
+                                        <rect key="frame" x="32" y="389.5" width="311" height="1"/>
+                                        <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="lwd-e0-ZhG"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYj-s6-gha">
+                                        <rect key="frame" x="166" y="643" width="42" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="u37-WA-FWN" firstAttribute="centerY" secondItem="yla-KE-Y7F" secondAttribute="centerY" id="0YV-lL-WDM"/>
+                                    <constraint firstItem="yla-KE-Y7F" firstAttribute="top" secondItem="hw0-3d-VZ2" secondAttribute="bottom" constant="20" id="0uN-bJ-rCt"/>
+                                    <constraint firstItem="jx1-QK-rmy" firstAttribute="leading" secondItem="caB-ho-6hO" secondAttribute="trailing" constant="12" id="17r-xp-02G"/>
+                                    <constraint firstItem="yla-KE-Y7F" firstAttribute="leading" secondItem="u37-WA-FWN" secondAttribute="trailing" constant="8" id="1Nh-Kj-5tf"/>
+                                    <constraint firstItem="TOz-q1-nFa" firstAttribute="centerY" secondItem="egx-tF-z1n" secondAttribute="centerY" id="23T-Uf-kdS"/>
                                     <constraint firstItem="rRN-C4-oQh" firstAttribute="leading" secondItem="SMj-Xv-0Rc" secondAttribute="leading" id="4z5-no-TKl"/>
                                     <constraint firstItem="SMj-Xv-0Rc" firstAttribute="trailing" secondItem="Ysa-lR-PSo" secondAttribute="trailing" id="81C-JX-NMm"/>
                                     <constraint firstAttribute="bottom" secondItem="b6Y-mx-2Fr" secondAttribute="bottom" constant="100" id="AHJ-k6-9QV"/>
                                     <constraint firstItem="Ysa-lR-PSo" firstAttribute="trailing" secondItem="b6Y-mx-2Fr" secondAttribute="trailing" constant="16" id="H48-Lm-Tfh"/>
                                     <constraint firstItem="b6Y-mx-2Fr" firstAttribute="top" secondItem="Z3d-2D-xkY" secondAttribute="top" constant="140" id="JbS-8c-FVH"/>
+                                    <constraint firstItem="egx-tF-z1n" firstAttribute="trailing" secondItem="jx1-QK-rmy" secondAttribute="trailing" id="K33-Dn-jG4"/>
+                                    <constraint firstItem="GJY-BA-3cF" firstAttribute="top" secondItem="u37-WA-FWN" secondAttribute="bottom" id="Pwu-4y-ucf"/>
+                                    <constraint firstItem="caB-ho-6hO" firstAttribute="centerY" secondItem="jx1-QK-rmy" secondAttribute="centerY" id="Qed-eY-D8X"/>
+                                    <constraint firstItem="yla-KE-Y7F" firstAttribute="trailing" secondItem="hw0-3d-VZ2" secondAttribute="trailing" id="S6f-xm-Ztk"/>
                                     <constraint firstItem="SMj-Xv-0Rc" firstAttribute="top" secondItem="Z3d-2D-xkY" secondAttribute="top" id="SWR-Za-Cyf"/>
+                                    <constraint firstItem="jx1-QK-rmy" firstAttribute="trailing" secondItem="yla-KE-Y7F" secondAttribute="trailing" id="Skz-Rb-Mrc"/>
+                                    <constraint firstItem="zsQ-S0-gao" firstAttribute="leading" secondItem="Z3d-2D-xkY" secondAttribute="leading" constant="32" id="T3d-21-9fi"/>
+                                    <constraint firstItem="hw0-3d-VZ2" firstAttribute="top" secondItem="Z3d-2D-xkY" secondAttribute="top" constant="156" id="TGb-O4-mM2"/>
+                                    <constraint firstItem="hw0-3d-VZ2" firstAttribute="leading" secondItem="hUz-SX-cgo" secondAttribute="leading" constant="32" id="TM2-Iv-QFW"/>
+                                    <constraint firstAttribute="trailing" secondItem="zsQ-S0-gao" secondAttribute="trailing" constant="32" id="UU5-Rx-fbr"/>
                                     <constraint firstItem="SMj-Xv-0Rc" firstAttribute="leading" secondItem="Ysa-lR-PSo" secondAttribute="leading" id="WrW-LK-4x1"/>
+                                    <constraint firstItem="egx-tF-z1n" firstAttribute="leading" secondItem="TOz-q1-nFa" secondAttribute="trailing" constant="12" id="X3y-h5-QEq"/>
+                                    <constraint firstItem="GJY-BA-3cF" firstAttribute="trailing" secondItem="u37-WA-FWN" secondAttribute="trailing" id="YN3-RV-xNI"/>
+                                    <constraint firstItem="caB-ho-6hO" firstAttribute="top" secondItem="GJY-BA-3cF" secondAttribute="bottom" id="e4T-6F-zjF"/>
+                                    <constraint firstItem="Ysa-lR-PSo" firstAttribute="trailing" secondItem="hw0-3d-VZ2" secondAttribute="trailing" constant="32" id="jXh-fb-B2V"/>
+                                    <constraint firstItem="zsQ-S0-gao" firstAttribute="top" secondItem="TOz-q1-nFa" secondAttribute="bottom" constant="50" id="kpi-rg-NoK"/>
                                     <constraint firstItem="rRN-C4-oQh" firstAttribute="top" secondItem="Z3d-2D-xkY" secondAttribute="top" id="o0v-u0-8YQ"/>
                                     <constraint firstItem="rRN-C4-oQh" firstAttribute="trailing" secondItem="SMj-Xv-0Rc" secondAttribute="trailing" id="pq1-sl-V3k"/>
                                     <constraint firstItem="b6Y-mx-2Fr" firstAttribute="leading" secondItem="Ysa-lR-PSo" secondAttribute="leading" constant="16" id="slA-WN-pal"/>
+                                    <constraint firstItem="egx-tF-z1n" firstAttribute="top" secondItem="jx1-QK-rmy" secondAttribute="bottom" constant="30" id="stI-4g-qwN"/>
+                                    <constraint firstItem="jx1-QK-rmy" firstAttribute="top" secondItem="yla-KE-Y7F" secondAttribute="bottom" constant="30" id="yW0-BR-kp9"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="hUz-SX-cgo"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Ysa-lR-PSo"/>

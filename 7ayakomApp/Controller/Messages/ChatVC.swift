@@ -41,8 +41,8 @@ class ChatVC : UIViewController {
         db.collection("Chat").document("messages").collection(collectionId)
             .addSnapshotListener(includeMetadataChanges: true) { documentSnapshot, error in
              if self.status {
-                   self.dotsView.isHidden = false
-                   self.dotsHeightConstranit.constant = 30
+                //   self.dotsView.isHidden = false
+                //  self.dotsHeightConstranit.constant = 30
                    self.fetchChatMessages()
                 }
                
