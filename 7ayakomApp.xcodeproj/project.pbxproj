@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1C921D23639CA900D480E1 /* CommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1C921C23639CA900D480E1 /* CommentVC.swift */; };
 		5B3B30DA235A31BF0077B4CB /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B30D9235A31BF0077B4CB /* EventsVC.swift */; };
 		5B3B30DC235A3A890077B4CB /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B30DB235A3A890077B4CB /* UIWindow.swift */; };
 		5B3B30DE235B06680077B4CB /* SearchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3B30DD235B06680077B4CB /* SearchDataSource.swift */; };
@@ -127,6 +128,7 @@
 		13B51E3A447A10C21DB45E74 /* Pods-7ayakomApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7ayakomApp.debug.xcconfig"; path = "Target Support Files/Pods-7ayakomApp/Pods-7ayakomApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1E0CA44F4B15363FE058D5B6 /* Pods-7ayakomApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-7ayakomApp.release.xcconfig"; path = "Target Support Files/Pods-7ayakomApp/Pods-7ayakomApp.release.xcconfig"; sourceTree = "<group>"; };
 		1FE2269700FDE6C2E3542B7C /* Pods_7ayakomApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_7ayakomApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B1C921C23639CA900D480E1 /* CommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentVC.swift; sourceTree = "<group>"; };
 		5B3B30D9235A31BF0077B4CB /* EventsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
 		5B3B30DB235A3A890077B4CB /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		5B3B30DD235B06680077B4CB /* SearchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDataSource.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				5BFB28F42350D02E00B0A270 /* EventDetailsViewController.swift */,
+				5B1C921C23639CA900D480E1 /* CommentVC.swift */,
 			);
 			path = EventDetails;
 			sourceTree = "<group>";
@@ -560,8 +563,8 @@
 		8C276772234CC4B200F75BAD /* StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
-				8C276773234CC4B200F75BAD /* Events.storyboard */,
 				8C276774234CC4B200F75BAD /* Nibs */,
+				8C276773234CC4B200F75BAD /* Events.storyboard */,
 				8C276777234CC4B200F75BAD /* Home.storyboard */,
 				8C276778234CC4B200F75BAD /* LaunchScreen.storyboard */,
 				8C27677A234CC4B200F75BAD /* Main.storyboard */,
@@ -785,6 +788,7 @@
 				8C27679C234CC4B300F75BAD /* UIImage.swift in Sources */,
 				5BB2ED9323576D6500632F12 /* MessageSenderCell.swift in Sources */,
 				8C276789234CC4B300F75BAD /* SavedEventsViewController.swift in Sources */,
+				5B1C921D23639CA900D480E1 /* CommentVC.swift in Sources */,
 				8C2767C2234CC4B300F75BAD /* EventDataSource.swift in Sources */,
 				8C276794234CC4B300F75BAD /* UITabBar.swift in Sources */,
 				8C2767A0234CC4B300F75BAD /* UIApplication.swift in Sources */,

@@ -15,6 +15,7 @@ class LastMessageCell : UITableViewCell {
       @IBOutlet weak var userImage : UIImageView!
       @IBOutlet weak var userName : UILabel!
       @IBOutlet weak var userLastMsg : UILabel!
+      @IBOutlet weak var stackView : UIStackView!
     
 
     func setData(message : LastMessage){

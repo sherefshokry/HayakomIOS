@@ -5,7 +5,6 @@
 //  Created by SherifShokry on 10/19/19.
 //  Copyright © 2019 Nora Sayed. All rights reserved.
 //
-
 import UIKit
 
 class SearchVC : UIViewController {
