@@ -8,20 +8,53 @@
 import Foundation
 
 class EventDetailsDataSource: BaseAPI {
-    func getMeetUpDetails(completion:@escaping(ResponseStatus,Any)->Void) {
-        let eventId = 2
-        let userId = 6
-        let url = Constants.GET_MEETUP_DETAILS +  "?MeetupId=\(eventId)&UserId=\(userId)"
+    
+    
+    func addMeetupToFavourite(meetupId : Int,completion:@escaping(ResponseStatus,Any)->Void){
         
-         BaseAPI(url: url , method: .get , params: nil , headers: nil) { (json, error) in
+        let userId = 6
+        let url = Constants.ADD_MEETUP_TO_FAVOURITE +  "?MeetupId=\(meetupId)&UserId=\(userId)"
+        
+        BaseAPI(url: url , method: .post , params: nil , headers: nil) { (json, error) in
             if json != nil {
+                let response = BaseResponse.init(dict: json!)
+                if response.Status{
+                    completion(.sucess , response.Message)
+                }else{
+                    //get error
+                    completion(.error , response.Message == "" ?  "Something went wrong!".localize() : response.Status)
+                }
+            }else{
+                if (error != nil){
+                    completion(.networkError , error!.localizedDescription)
+                }
+                else{
+                    completion(.networkError,"Something went wrong!")
+                }
+            }
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    func getMeetUpDetails(meetupId : Int,completion:@escaping(ResponseStatus,Any)->Void) {
+        let userId = 6
+        let url = Constants.GET_MEETUP_DETAILS +  "?MeetupId=\(meetupId)&UserId=\(userId)"
+        
+        BaseAPI(url: url , method: .get , params: nil , headers: nil) { (json, error) in
+            if json != nil {
+                
                 let response = BaseResponse.init(dict: json!)
                 if response.Status{
                     if let data = response.Obj["Result"] as? [String : Any]{
                         let event =  Event.init(dict: data)
                         completion(.sucess , event )
                     }else{
-                         completion(.sucess , response.Message)
+                        completion(.sucess , response.Message)
                     }
                 }else{
                     //get error

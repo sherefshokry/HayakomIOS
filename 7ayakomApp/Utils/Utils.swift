@@ -54,6 +54,24 @@ class Utils {
             return nil
         }
     }
+    
+    
+    static func navigateToMap(latitude : String , longitude : String){
+        
+    if UIApplication.shared.canOpenURL(URL.init(string:"comgooglemaps://")!) {
+             let url = URL.init(string: "comgooglemaps://?saddr=&daddr=\(latitude),\(longitude)&directionsmode=driving")! as URL
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+       // }
+            
+
+    }
+    }
+    
+    
     static func getNotificationStatus()->Bool{
         if let status = UserDefaults.standard.value(forKey: Constants.NOTIFICATIONS) as? Bool{
             return status

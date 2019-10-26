@@ -11,12 +11,13 @@ import Foundation
 class CommentDataSource: BaseAPI {
   
     
-    func getComments(completion:@escaping(ResponseStatus,Any)->Void) {
-        let eventId = 2
-        let url = Constants.GET_COMMENTS + "\(eventId)"
+    func getComments(meetupId : Int,completion:@escaping(ResponseStatus,Any)->Void) {
+   
+        let url = Constants.GET_COMMENTS + "\(meetupId)"
         
          BaseAPI(url: url , method: .get , params: nil , headers: nil) { (json, error) in
             if json != nil {
+               
                 let response = BaseResponse.init(dict: json!)
                 if response.Status{
                     if let data = response.Obj["Result"] as? [[String : Any]]{

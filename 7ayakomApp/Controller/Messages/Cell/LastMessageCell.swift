@@ -15,6 +15,7 @@ class LastMessageCell : UITableViewCell {
       @IBOutlet weak var userImage : UIImageView!
       @IBOutlet weak var userName : UILabel!
       @IBOutlet weak var userLastMsg : UILabel!
+      @IBOutlet weak var stackView : UIStackView!
     
 
     func setData(message : LastMessage){
@@ -27,6 +28,17 @@ class LastMessageCell : UITableViewCell {
            
         }
   }
+    
+    
+    func setData(comment : Comment){
+        let messageDate =  comment.commentDate.toDate()
+        messageTime.text = messageDate.getElapsedInterval()
+        userLastMsg.text = comment.commentText
+        userName.text = comment.commentUser.userName
+        userImage.sd_setImage(with:  URL(string:
+            comment.commentUser.imagePath),placeholderImage: UIImage(named: "splash")) { (image, error, cache, url) in
+        }
+    }
     
  
   

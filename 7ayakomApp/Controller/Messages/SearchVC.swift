@@ -5,7 +5,6 @@
 //  Created by SherifShokry on 10/19/19.
 //  Copyright © 2019 Nora Sayed. All rights reserved.
 //
-
 import UIKit
 
 class SearchVC : UIViewController {
@@ -125,14 +124,18 @@ extension SearchVC : UITableViewDelegate , UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-         let vc = ChatVC.instantiateFromStoryBoard(appStoryBoard: .Home)
-               vc.reciverUser = userList[indexPath.row]
-               self.present(vc, animated: true, completion: nil)
+        
+          if indicator.isHidden {
+            let vc = ChatVC.instantiateFromStoryBoard(appStoryBoard: .Home)
+            vc.reciverUser = userList[indexPath.row]
+            self.present(vc, animated: true, completion: nil)
+        }
+       
     }
     
 }
 extension SearchVC : UITextFieldDelegate {
-    
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
          textField.resignFirstResponder()
          page = 0
@@ -141,6 +144,5 @@ extension SearchVC : UITextFieldDelegate {
          searchUsersByName()
        return true
     }
-
 }
 

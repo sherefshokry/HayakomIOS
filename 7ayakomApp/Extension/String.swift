@@ -148,6 +148,12 @@ extension String {
     
     func toDate () -> Date{
         let dateFormatter = DateFormatter()
+     
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+               if let date = dateFormatter.date(from: self)
+               {
+                   return date
+               }
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         if let date = dateFormatter.date(from: self)
         {
