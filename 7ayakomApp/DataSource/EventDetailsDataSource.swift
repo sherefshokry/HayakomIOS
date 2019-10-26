@@ -15,6 +15,7 @@ class EventDetailsDataSource: BaseAPI {
         
          BaseAPI(url: url , method: .get , params: nil , headers: nil) { (json, error) in
             if json != nil {
+
                 let response = BaseResponse.init(dict: json!)
                 if response.Status{
                     if let data = response.Obj["Result"] as? [String : Any]{

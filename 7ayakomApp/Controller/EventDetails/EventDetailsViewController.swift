@@ -33,20 +33,28 @@ class EventDetailsViewController : UIViewController {
     var eventId = 0
     var numberOfRows = 10
     var lastIndex = 9
+    var commentsList = [Comment]()
+    
+    
+    
+    
     @IBAction func navigateToAddress(_ sender : Any){
-         print("navigate")
+        Utils.navigateToMap(latitude: event.MeetupLatitude, longitude: event.MeetupLongitude)
 }
     
     @IBAction func joinMeetup(_ sender : Any){
         print("join")
-       }
+    }
     
     @IBAction func addMeetupToFavourite(_ sender : Any){
-        print("Favourite")
-       }
+        
+        favouriteBtn.isSelected = !favouriteBtn.isSelected
+        //call add to favourite api
+    }
     
     @IBAction func addComment(_ sender : Any){
         let vc = CommentVC.instantiateFromStoryBoard(appStoryBoard: .Events)
+        vc.modalPresentationStyle = .custom
         self.present(vc, animated: true, completion: nil)
     }
     
@@ -54,9 +62,9 @@ class EventDetailsViewController : UIViewController {
     @IBAction func shareMeetUp(_ sender : Any){
       print("share")
     }
-    
     var event : Event = Event()
-    var commentList : [Comment] = []
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDetailsData()
@@ -92,8 +100,8 @@ class EventDetailsViewController : UIViewController {
               KVNProgress.dismiss()
                  switch status{
                  case .sucess :
-                     self.commentList = response as? [Comment] ?? []
-                    // self.tableView.reloadData()
+                     self.commentsList = response as? [Comment] ?? []
+                     self.reloadTableData()
                      break
                  case .error :
                      self.showMessage((response as? String)!)
@@ -106,38 +114,53 @@ class EventDetailsViewController : UIViewController {
         
     }
     
+    func reloadTableData(){
+        tableCellsHeight =  CGFloat(0)
+        self.tableView.reloadData()
+    }
     
     func setEventData(){
         eventTitle.text = event.MeetupName
-        eventImage.sd_setImage(with: URL.init(string: event.MeetupImagePath))
-   }
-    
+        eventDetails.text = event.MeetupDetails
+        eventLocation.text = event.MeetupFullLocation
+       // eventGuest.text = event.
+        if event.isFavourite == 1 {
+           favouriteBtn.isSelected = true
+        }else{
+          favouriteBtn.isSelected = true
+        }
+        eventImage.sd_setImage(with: URL.init(string: event.MeetupImagePath),placeholderImage: UIImage(named: "splash"))
+        attendersNumber.text = "\(event.attenders) +"
+        firstUserImage.isHidden = !(event.meetupAttenderUsers.count >= 1)
+        secondUserImage.isHidden = !(event.meetupAttenderUsers.count  >= 2)
+              thirdUserImage.isHidden = !(event.meetupAttenderUsers.count  >= 3)
+        event.meetupAttenderUsers.count >= 1 ? firstUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[0].imagePath),placeholderImage: UIImage(named: "splash")) : firstUserImage.sd_setImage(with: URL.init(string: ""))
+                      
+        event.meetupAttenderUsers.count >= 2 ? secondUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[1].imagePath)) : secondUserImage.sd_setImage(with: URL.init(string: ""),placeholderImage: UIImage(named: "splash"))
+                      
+        event.meetupAttenderUsers.count >= 3 ? thirdUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[2].imagePath),placeholderImage: UIImage(named: "splash")) : thirdUserImage.sd_setImage(with: URL.init(string: ""))
+        
+         }
     
 }
 extension EventDetailsViewController : UITableViewDelegate , UITableViewDataSource {
     
-    
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return numberOfRows
+        return commentsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LastMessageCell", for: indexPath) as! LastMessageCell
-        tableCellsHeight += cell.stackView.frame.height
-        self.tableHeightConstraint.constant = tableCellsHeight + CGFloat(320)
-        self.view.layoutIfNeeded()
+        cell.setData(comment: commentsList[indexPath.row])
+        tableCellsHeight += cell.stackView.frame.height// + CGFloat(32)
+         self.tableHeightConstraint.constant = (tableCellsHeight)///2
+         self.view.layoutIfNeeded()
          return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    
-    
-    
-    
     
     
     

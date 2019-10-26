@@ -29,6 +29,17 @@ class LastMessageCell : UITableViewCell {
         }
   }
     
+    
+    func setData(comment : Comment){
+        let messageDate =  comment.commentDate.toDate()
+        messageTime.text = messageDate.getElapsedInterval()
+        userLastMsg.text = comment.commentText
+        userName.text = comment.commentUser.userName
+        userImage.sd_setImage(with:  URL(string:
+            comment.commentUser.imagePath),placeholderImage: UIImage(named: "splash")) { (image, error, cache, url) in
+        }
+    }
+    
  
   
     
