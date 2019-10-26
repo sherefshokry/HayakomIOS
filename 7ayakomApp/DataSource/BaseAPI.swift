@@ -13,24 +13,25 @@ import Arrow
 class BaseAPI : Any {
     //swagger link http://hayakomapi.natlab.net/swagger/ui/index#/
     struct  Constants {
-        static var BASE_URL = "http://hayakomapi.natlab.net"
-        static var GET_CATEGORIES = BASE_URL + "/api/MobileCategory/GetAllCategories"
-        static var GET_ALL_MEETUPS = BASE_URL + "/api/MobileMeetup/GetAllMeetup"
-          static var GET_Past_MEETUPS = BASE_URL + "/api/MobileMeetup/GetPastMeetups"
-        static var GET_JOINT_MEETUPS = BASE_URL + "/api/MobileMeetup/GetUserJoinedMeetups?UserId="
+        static var BASE_URL = "http://hayakomapi.natlab.net/api"
+        static var GET_CATEGORIES = BASE_URL + "/MobileCategory/GetAllCategories"
+        static var GET_ALL_MEETUPS = BASE_URL + "/MobileMeetup/GetAllMeetup"
+          static var GET_Past_MEETUPS = BASE_URL + "/MobileMeetup/GetPastMeetups"
+        static var GET_JOINT_MEETUPS = BASE_URL + "/MobileMeetup/GetUserJoinedMeetups?UserId="
         static var GET_FAVOURITE_MEETUPS = BASE_URL +
-        "/api/MobileMeetup/GetUserFavouriteMeetups?UserId="
-        static var GET_MEETUP_DETAILS = BASE_URL + "/api/MobileMeetup/GetMeetupDetailsWithFav"
-        static var GET_COMMENTS = BASE_URL + "/api/MobileMeetupComments/GetMeetupComments?MeetupId="
+        "/MobileMeetup/GetUserFavouriteMeetups?UserId="
+        static var GET_MEETUP_DETAILS = BASE_URL + "/MobileMeetup/GetMeetupDetailsWithFav"
+        static var GET_COMMENTS = BASE_URL + "/MobileMeetupComments/GetMeetupComments?MeetupId="
         static var GET_NOTIFICATIONS = BASE_URL +
-               "/api/MobileMobileUser/GetNotificationDetailsByUserId?UserId="
-        static var GET_USERS_BY_NAME = BASE_URL + "/api/MobileMobileUser/GetMobileUsersByName?Name="
+               "/MobileMobileUser/GetNotificationDetailsByUserId?UserId="
+        static var GET_USERS_BY_NAME = BASE_URL + "/MobileMobileUser/GetMobileUsersByName?Name="
+        
+        static var ADD_MEETUP_TO_FAVOURITE = BASE_URL + "/MobileMeetup/AddMeetToUserFavourites"
         
         
         
-        
-        static var LOGIN = BASE_URL + "Login"
-        
+      static var LOGIN = BASE_URL + "Login"
+//
         
         
     }

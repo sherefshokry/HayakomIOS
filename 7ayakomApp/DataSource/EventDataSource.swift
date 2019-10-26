@@ -37,7 +37,6 @@ class EventDataSource: BaseAPI {
         
     }
     
-    
     func getPastMeetUps(completion:@escaping(ResponseStatus,Any)->Void) {
           
           BaseAPI(url: Constants.GET_Past_MEETUPS , method: .get , params: nil , headers: nil) { (json, error) in

@@ -31,11 +31,7 @@ class EventDetailsViewController : UIViewController {
     @IBOutlet weak var tableHeightConstraint : NSLayoutConstraint!
     var tableCellsHeight =  CGFloat(0)
     var eventId = 0
-    var numberOfRows = 10
-    var lastIndex = 9
     var commentsList = [Comment]()
-    
-    
     
     
     @IBAction func navigateToAddress(_ sender : Any){
@@ -43,13 +39,11 @@ class EventDetailsViewController : UIViewController {
 }
     
     @IBAction func joinMeetup(_ sender : Any){
-        print("join")
+        
     }
     
     @IBAction func addMeetupToFavourite(_ sender : Any){
-        
-        favouriteBtn.isSelected = !favouriteBtn.isSelected
-        //call add to favourite api
+          addMeetupToFavourite()
     }
     
     @IBAction func addComment(_ sender : Any){
@@ -74,7 +68,7 @@ class EventDetailsViewController : UIViewController {
       
         let dataSource = EventDetailsDataSource()
         KVNProgress.show()
-        dataSource.getMeetUpDetails { (status, response) in
+        dataSource.getMeetUpDetails(meetupId: eventId) { (status, response) in
             KVNProgress.dismiss()
                switch status{
                case .sucess :
@@ -83,10 +77,10 @@ class EventDetailsViewController : UIViewController {
                    self.loadComments()
                    break
                case .error :
-                   self.showMessage((response as? String)!)
+                   self.showMessage(response as? String ?? "")
                    break
                case .networkError :
-                   self.showMessage((response as? String)!)
+                   self.showMessage(response as? String ?? "")
                    break
                }
            }
@@ -96,7 +90,7 @@ class EventDetailsViewController : UIViewController {
     func loadComments(){
         let dataSource = CommentDataSource()
           KVNProgress.show()
-          dataSource.getComments { (status, response) in
+        dataSource.getComments(meetupId: eventId) { (status, response) in
               KVNProgress.dismiss()
                  switch status{
                  case .sucess :
@@ -114,6 +108,30 @@ class EventDetailsViewController : UIViewController {
         
     }
     
+    
+     func addMeetupToFavourite(){
+         let dataSource = EventDetailsDataSource()
+         KVNProgress.show()
+        dataSource.addMeetupToFavourite(meetupId : eventId) { (status, response) in
+               KVNProgress.dismiss()
+                  switch status{
+                  case .sucess :
+                    self.showMessage(response as? String ?? "") {
+                        self.favouriteBtn.isSelected = !self.favouriteBtn.isSelected
+                    }
+                      break
+                  case .error :
+                      self.showMessage((response as? String)!)
+                      break
+                  case .networkError :
+                      self.showMessage((response as? String)!)
+                      break
+                  }
+              }
+         
+     }
+
+
     func reloadTableData(){
         tableCellsHeight =  CGFloat(0)
         self.tableView.reloadData()
