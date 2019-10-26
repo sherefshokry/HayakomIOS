@@ -77,10 +77,10 @@ class EventDetailsViewController : UIViewController {
                    self.loadComments()
                    break
                case .error :
-                   self.showMessage(response as? String ?? "")
+                   self.showMessage(response as? String ?? "حدث خطأ ما")
                    break
                case .networkError :
-                   self.showMessage(response as? String ?? "")
+                   self.showMessage(response as? String ?? "حدث خطأ ما")
                    break
                }
            }
@@ -116,7 +116,7 @@ class EventDetailsViewController : UIViewController {
                KVNProgress.dismiss()
                   switch status{
                   case .sucess :
-                    self.showMessage(response as? String ?? "") {
+                    self.showMessage(response as? String ?? "تم اضافة الفاعلية للمفضلات") {
                         self.favouriteBtn.isSelected = !self.favouriteBtn.isSelected
                     }
                       break

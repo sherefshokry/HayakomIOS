@@ -49,10 +49,10 @@ class GoingViewController: UIViewController {
                    self.tableView.reloadData()
                    break
                case .error :
-                   self.showMessage(response as? String ?? "")
+                   self.showMessage(response as? String ?? "حدث خطأ ما")
                    break
                case .networkError :
-                   self.showMessage(response as? String ?? "")
+                   self.showMessage(response as? String ?? "حدث خطأ ما")
                    break
                }
            }
