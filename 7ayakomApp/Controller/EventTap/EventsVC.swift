@@ -15,10 +15,8 @@ class EventsVC : UIViewController {
     
      var list = [Event]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
@@ -85,6 +83,7 @@ extension EventsVC : UITableViewDataSource,UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let vc = EventDetailsViewController.instantiateFromStoryBoard(appStoryBoard: .Events)
+        vc.eventId = list[indexPath.row].MeetupId
         self.present(vc, animated: true, completion: nil)
     }
 

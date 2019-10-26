@@ -833,7 +833,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6Y-mx-2Fr" customClass="AllSidsCardView" customModule="_ayakomApp" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="140" width="343" height="969"/>
+                                        <rect key="frame" x="16" y="140" width="343" height="964.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
@@ -1114,21 +1114,21 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JyG-Ny-AEV">
-                                        <rect key="frame" x="16" y="824.5" width="343" height="264.5"/>
+                                        <rect key="frame" x="16" y="824.5" width="343" height="260"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="264.5" id="6M4-3V-67T"/>
+                                            <constraint firstAttribute="height" constant="260" id="6M4-3V-67T"/>
                                         </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LastMessageCell" id="oxr-P2-tUY" customClass="LastMessageCell" customModule="_ayakomApp">
-                                                <rect key="frame" x="0.0" y="28" width="343" height="182"/>
+                                                <rect key="frame" x="0.0" y="28" width="343" height="132"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oxr-P2-tUY" id="NIY-Gm-Fkw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="182"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="132"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-wi-ihl">
-                                                            <rect key="frame" x="285" y="70" width="42" height="42"/>
+                                                            <rect key="frame" x="285" y="45" width="42" height="42"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="42" id="B2j-uZ-cn9"/>
@@ -1141,23 +1141,23 @@
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-ZE-Tak">
-                                                            <rect key="frame" x="0.0" y="181" width="343" height="1"/>
+                                                            <rect key="frame" x="0.0" y="131" width="343" height="1"/>
                                                             <color key="backgroundColor" red="0.8980392157" green="0.92549019610000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="OdA-tV-99S"/>
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yE4-xz-K8b">
-                                                            <rect key="frame" x="111" y="16" width="158" height="150"/>
+                                                            <rect key="frame" x="16" y="16" width="253" height="100"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sherif Mohammed Shokry" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLG-id-yE0">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="253" height="25"/>
                                                                     <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
                                                                     <color key="textColor" red="0.1019607843" green="0.2156862745" blue="0.28627450980000002" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Hello World Hello World Hello World Hello World Hello World Hello World Hello World v Hello World Hello World" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSC-Zj-93s">
-                                                                    <rect key="frame" x="0.0" y="25" width="158" height="125"/>
+                                                                    <rect key="frame" x="0.0" y="25" width="253" height="75"/>
                                                                     <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="13"/>
                                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1179,11 +1179,11 @@
                                                         <constraint firstItem="Yib-8j-ymA" firstAttribute="top" secondItem="NIY-Gm-Fkw" secondAttribute="topMargin" constant="8" id="FBT-JP-R6K"/>
                                                         <constraint firstAttribute="bottom" secondItem="JXb-ZE-Tak" secondAttribute="bottom" id="Ida-HN-vcm"/>
                                                         <constraint firstItem="yE4-xz-K8b" firstAttribute="top" secondItem="NIY-Gm-Fkw" secondAttribute="top" constant="16" id="MZE-ID-9Ew"/>
-                                                        <constraint firstItem="yE4-xz-K8b" firstAttribute="leading" secondItem="Yib-8j-ymA" secondAttribute="trailing" constant="8" id="QyZ-nU-OQ0"/>
                                                         <constraint firstAttribute="trailing" secondItem="JXb-ZE-Tak" secondAttribute="trailing" id="Yda-LH-RV6"/>
                                                         <constraint firstItem="wBk-wi-ihl" firstAttribute="leading" secondItem="yE4-xz-K8b" secondAttribute="trailing" constant="16" id="ZuF-UN-aH9"/>
                                                         <constraint firstAttribute="trailing" secondItem="wBk-wi-ihl" secondAttribute="trailing" constant="16" id="aLl-WD-z8M"/>
                                                         <constraint firstItem="Yib-8j-ymA" firstAttribute="leading" secondItem="NIY-Gm-Fkw" secondAttribute="leadingMargin" constant="8" id="kvl-Hm-5L9"/>
+                                                        <constraint firstItem="yE4-xz-K8b" firstAttribute="leading" secondItem="NIY-Gm-Fkw" secondAttribute="leading" constant="16" id="lSz-wX-7K2"/>
                                                         <constraint firstItem="wBk-wi-ihl" firstAttribute="centerY" secondItem="NIY-Gm-Fkw" secondAttribute="centerY" id="n8P-jm-sCO"/>
                                                         <constraint firstItem="JXb-ZE-Tak" firstAttribute="leading" secondItem="NIY-Gm-Fkw" secondAttribute="leading" id="ucm-0Y-kdJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="yE4-xz-K8b" secondAttribute="bottom" constant="16" id="ztE-7i-Ol5"/>
@@ -1287,8 +1287,13 @@
                                             <constraint firstAttribute="height" constant="32" id="dkb-fc-P2w"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="FrutigerLTArabic-55Roman" family="Frutiger LT Arabic" pointSize="12"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="إنضم">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected" title="إلغاء الإنضمام">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -1405,6 +1410,9 @@
                                                 <real key="value" value="18"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendCommentPressed:" destination="1RN-9L-gya" eventType="touchUpInside" id="NrC-Rh-4TD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1440,6 +1448,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HiB-fT-uNf"/>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="ylQ-QD-Ajv" id="0PR-lD-ZbM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vdo-QH-OGx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

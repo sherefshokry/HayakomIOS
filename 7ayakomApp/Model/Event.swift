@@ -22,7 +22,8 @@ struct Event : Codable {
     var attenders : Int
     var meetupAttenderUsers : [Attender]
     var comments : [Comment]
-    var isFavourite : Int
+    var isFavourite : Bool
+    var isGoing : Bool
 }
 
 extension Event : ArrowParsable{
@@ -39,7 +40,8 @@ extension Event : ArrowParsable{
         attenders = 0
         meetupAttenderUsers = []
         comments = []
-        isFavourite = 0
+        isFavourite = false
+        isGoing = false
     }
     
     mutating func deserialize(_ json: JSON) {
@@ -55,6 +57,7 @@ extension Event : ArrowParsable{
         attenders <-- json["Attenders"]
         meetupAttenderUsers <-- json["MeetupAttenderUsers"]
         isFavourite <-- json["IsFavourite"]
+        isGoing <-- json["IsGoing"]
     }
     
     static func getList(data: [[String : Any]])->[Event]{

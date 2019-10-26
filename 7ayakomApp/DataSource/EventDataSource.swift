@@ -9,6 +9,8 @@
 import Foundation
 
 class EventDataSource: BaseAPI {
+
+    
     func getAllMeetUps(completion:@escaping(ResponseStatus,Any)->Void) {
         
         BaseAPI(url: Constants.GET_ALL_MEETUPS , method: .get , params: nil , headers: nil) { (json, error) in
@@ -100,7 +102,7 @@ class EventDataSource: BaseAPI {
     
     func getJointMeetUps(completion:@escaping(ResponseStatus,Any)->Void) {
             
-           let userId = 23
+           let userId = 6
            let url = Constants.GET_JOINT_MEETUPS + "\(userId)"
            
         

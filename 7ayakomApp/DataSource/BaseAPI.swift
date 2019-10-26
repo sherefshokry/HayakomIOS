@@ -25,10 +25,9 @@ class BaseAPI : Any {
         static var GET_NOTIFICATIONS = BASE_URL +
                "/MobileMobileUser/GetNotificationDetailsByUserId?UserId="
         static var GET_USERS_BY_NAME = BASE_URL + "/MobileMobileUser/GetMobileUsersByName?Name="
-        
         static var ADD_MEETUP_TO_FAVOURITE = BASE_URL + "/MobileMeetup/AddMeetToUserFavourites"
-        
-        
+        static var JOIN_MEETUP = BASE_URL + "/MobileMeetup/JoinMeetup"
+        static var ADD_COMMENT = BASE_URL + "/MobileMeetupComments/addMeetupComment"
         
       static var LOGIN = BASE_URL + "Login"
 //

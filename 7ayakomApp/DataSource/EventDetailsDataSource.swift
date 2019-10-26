@@ -9,6 +9,66 @@ import Foundation
 
 class EventDetailsDataSource: BaseAPI {
     
+     func addComment(comment : String , meetupId : Int ,completion:@escaping(ResponseStatus,Any)->Void ) {
+         
+        let userId = 6
+         let url = Constants.ADD_COMMENT +  "?ParetCommentId=0&MeetupId=\(meetupId)&UserId=\(userId)&Comment=\(comment)"
+        
+         let validUrl = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? url
+        
+          BaseAPI(url: validUrl , method: .post , params: nil , headers: nil) { (json, error) in
+                    if json != nil {
+                        let response = BaseResponse.init(dict: json!)
+                        if response.Status{
+                            completion(.sucess , response.Message)
+                        }else{
+                            //get error
+                            completion(.error , response.Message == "" ?  "Something went wrong!".localize() : response.Status)
+                        }
+                    }else{
+                        if (error != nil){
+                            completion(.networkError , error!.localizedDescription)
+                        }
+                        else{
+                            completion(.networkError,"Something went wrong!")
+                        }
+                    }
+                }
+         
+         
+         
+         
+     }
+     
+     
+     
+    
+    
+    func joinMeetup(meetupId : Int,completion:@escaping(ResponseStatus,Any)->Void){
+          
+          let userId = 6
+          let url = Constants.JOIN_MEETUP +  "?MeetupId=\(meetupId)&UserId=\(userId)"
+          
+          BaseAPI(url: url , method: .post , params: nil , headers: nil) { (json, error) in
+              if json != nil {
+                  let response = BaseResponse.init(dict: json!)
+                  if response.Status{
+                      completion(.sucess , response.Message)
+                  }else{
+                      //get error
+                      completion(.error , response.Message == "" ?  "Something went wrong!".localize() : response.Status)
+                  }
+              }else{
+                  if (error != nil){
+                      completion(.networkError , error!.localizedDescription)
+                  }
+                  else{
+                      completion(.networkError,"Something went wrong!")
+                  }
+              }
+          }
+    }
+    
     
     func addMeetupToFavourite(meetupId : Int,completion:@escaping(ResponseStatus,Any)->Void){
         

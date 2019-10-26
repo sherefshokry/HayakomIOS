@@ -71,6 +71,23 @@ class Utils {
     }
     }
     
+    static func shareMeetup(vc : UIViewController,link : String) {
+
+        let textToShare = [link] //[URL.init(string: link)]
+        let activityViewController = UIActivityViewController(activityItems: textToShare as [Any],
+                applicationActivities: nil)
+        activityViewController.excludedActivityTypes = [.airDrop]
+
+        if let popoverController = activityViewController.popoverPresentationController {
+            popoverController.sourceRect = CGRect(x: UIScreen.main.bounds.width / 2,
+                    y: UIScreen.main.bounds.height / 2, width: 0, height: 0)
+            popoverController.sourceView = vc.view
+            popoverController.permittedArrowDirections = UIPopoverArrowDirection(rawValue: 0)
+        }
+        vc.present(activityViewController, animated: true, completion: nil)
+
+    }
+    
     
     static func getNotificationStatus()->Bool{
         if let status = UserDefaults.standard.value(forKey: Constants.NOTIFICATIONS) as? Bool{

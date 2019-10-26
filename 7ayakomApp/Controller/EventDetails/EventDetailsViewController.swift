@@ -33,31 +33,31 @@ class EventDetailsViewController : UIViewController {
     var eventId = 0
     var commentsList = [Comment]()
     
-    
     @IBAction func navigateToAddress(_ sender : Any){
         Utils.navigateToMap(latitude: event.MeetupLatitude, longitude: event.MeetupLongitude)
-}
+    }
     
     @IBAction func joinMeetup(_ sender : Any){
-        
+        jointMeetup()
     }
     
     @IBAction func addMeetupToFavourite(_ sender : Any){
-          addMeetupToFavourite()
+        addMeetupToFavourite()
     }
     
     @IBAction func addComment(_ sender : Any){
         let vc = CommentVC.instantiateFromStoryBoard(appStoryBoard: .Events)
         vc.modalPresentationStyle = .custom
+        vc.commentCompletion = { comment in
+            self.addComment(comment: comment)
+        }
         self.present(vc, animated: true, completion: nil)
     }
     
-    
     @IBAction func shareMeetUp(_ sender : Any){
-      print("share")
+        Utils.shareMeetup(vc: self, link: "Hayakom : join great events")
     }
     var event : Event = Event()
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,73 +65,119 @@ class EventDetailsViewController : UIViewController {
     }
     
     func loadDetailsData(){
-      
         let dataSource = EventDetailsDataSource()
+        scrollView.isHidden = true
+        joinBtn.isHidden = true
         KVNProgress.show()
         dataSource.getMeetUpDetails(meetupId: eventId) { (status, response) in
             KVNProgress.dismiss()
-               switch status{
-               case .sucess :
-                   self.event = response as? Event ?? Event()
-                   self.setEventData()
-                   self.loadComments()
-                   break
-               case .error :
-                   self.showMessage(response as? String ?? "")
-                   break
-               case .networkError :
-                   self.showMessage(response as? String ?? "")
-                   break
-               }
-           }
-  }
+            self.scrollView.isHidden = false
+            self.joinBtn.isHidden = false
+            switch status{
+            case .sucess :
+                self.event = response as? Event ?? Event()
+                self.setEventData()
+                self.loadComments()
+                break
+            case .error :
+                self.showMessage(response as? String ?? "")
+                break
+            case .networkError :
+                self.showMessage(response as? String ?? "")
+                break
+            }
+        }
+    }
     
     
     func loadComments(){
         let dataSource = CommentDataSource()
-          KVNProgress.show()
+        KVNProgress.show()
         dataSource.getComments(meetupId: eventId) { (status, response) in
-              KVNProgress.dismiss()
-                 switch status{
-                 case .sucess :
-                     self.commentsList = response as? [Comment] ?? []
-                     self.reloadTableData()
-                     break
-                 case .error :
-                     self.showMessage((response as? String)!)
-                     break
-                 case .networkError :
-                     self.showMessage((response as? String)!)
-                     break
-                 }
-             }
+            KVNProgress.dismiss()
+            switch status{
+            case .sucess :
+                self.commentsList = response as? [Comment] ?? []
+                self.reloadTableData()
+                break
+            case .error :
+                self.showMessage((response as? String)!)
+                break
+            case .networkError :
+                self.showMessage((response as? String)!)
+                break
+            }
+        }
+    }
+    
+    
+    func addMeetupToFavourite(){
+        let dataSource = EventDetailsDataSource()
+        KVNProgress.show()
+        dataSource.addMeetupToFavourite(meetupId : eventId) { (status, response) in
+            KVNProgress.dismiss()
+            switch status{
+            case .sucess :
+                self.showMessage(response as? String ?? "") {
+                    self.favouriteBtn.isSelected = !self.favouriteBtn.isSelected
+                }
+                break
+            case .error :
+                self.showMessage((response as? String)!)
+                break
+            case .networkError :
+                self.showMessage((response as? String)!)
+                break
+            }
+        }
+    }
+    
+    
+    func addComment(comment : String){
+        let dataSource = EventDetailsDataSource()
+        KVNProgress.show()
+        dataSource.addComment(comment: comment, meetupId: event.MeetupId){ (status, response) in
+            KVNProgress.dismiss()
+            switch status{
+            case .sucess :
+                self.loadComments()
+                break
+            case .error :
+                self.showMessage((response as? String)!)
+                break
+            case .networkError :
+                self.showMessage((response as? String)!)
+                break
+            }
+        }
+    }
+    
+    
+    func jointMeetup(){
+        let dataSource = EventDetailsDataSource()
+        KVNProgress.show()
+        dataSource.joinMeetup(meetupId : eventId) { (status, response) in
+            KVNProgress.dismiss()
+            switch status{
+            case .sucess :
+                self.showMessage(response as? String ?? "") {
+                    self.joinBtn.isSelected = !self.joinBtn.isSelected
+                }
+                break
+            case .error :
+                self.showMessage((response as? String)!)
+                break
+            case .networkError :
+                self.showMessage((response as? String)!)
+                break
+            }
+        }
         
     }
     
     
-     func addMeetupToFavourite(){
-         let dataSource = EventDetailsDataSource()
-         KVNProgress.show()
-        dataSource.addMeetupToFavourite(meetupId : eventId) { (status, response) in
-               KVNProgress.dismiss()
-                  switch status{
-                  case .sucess :
-                    self.showMessage(response as? String ?? "") {
-                        self.favouriteBtn.isSelected = !self.favouriteBtn.isSelected
-                    }
-                      break
-                  case .error :
-                      self.showMessage((response as? String)!)
-                      break
-                  case .networkError :
-                      self.showMessage((response as? String)!)
-                      break
-                  }
-              }
-         
-     }
-
-
+    
+    
     func reloadTableData(){
         tableCellsHeight =  CGFloat(0)
         self.tableView.reloadData()
@@ -141,24 +187,23 @@ class EventDetailsViewController : UIViewController {
         eventTitle.text = event.MeetupName
         eventDetails.text = event.MeetupDetails
         eventLocation.text = event.MeetupFullLocation
-       // eventGuest.text = event.
-        if event.isFavourite == 1 {
-           favouriteBtn.isSelected = true
-        }else{
-          favouriteBtn.isSelected = true
-        }
+        // eventGuest.text = event.
+        event.isFavourite ? (favouriteBtn.isSelected = true) : (favouriteBtn.isSelected = false)
+        event.isGoing ?  (joinBtn.isSelected = true) : (joinBtn.isSelected = false)
+        
         eventImage.sd_setImage(with: URL.init(string: event.MeetupImagePath),placeholderImage: UIImage(named: "splash"))
-        attendersNumber.text = "\(event.attenders) +"
+        event.attenders > 0 ?  (attendersNumber.text = "\(event.attenders) +") :  (attendersNumber.text = "")
+        
         firstUserImage.isHidden = !(event.meetupAttenderUsers.count >= 1)
         secondUserImage.isHidden = !(event.meetupAttenderUsers.count  >= 2)
-              thirdUserImage.isHidden = !(event.meetupAttenderUsers.count  >= 3)
+        thirdUserImage.isHidden = !(event.meetupAttenderUsers.count  >= 3)
         event.meetupAttenderUsers.count >= 1 ? firstUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[0].imagePath),placeholderImage: UIImage(named: "splash")) : firstUserImage.sd_setImage(with: URL.init(string: ""))
-                      
+        
         event.meetupAttenderUsers.count >= 2 ? secondUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[1].imagePath)) : secondUserImage.sd_setImage(with: URL.init(string: ""),placeholderImage: UIImage(named: "splash"))
-                      
+        
         event.meetupAttenderUsers.count >= 3 ? thirdUserImage.sd_setImage(with: URL.init(string:  event.meetupAttenderUsers[2].imagePath),placeholderImage: UIImage(named: "splash")) : thirdUserImage.sd_setImage(with: URL.init(string: ""))
         
-         }
+    }
     
 }
 extension EventDetailsViewController : UITableViewDelegate , UITableViewDataSource {
@@ -171,15 +216,13 @@ extension EventDetailsViewController : UITableViewDelegate , UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "LastMessageCell", for: indexPath) as! LastMessageCell
         cell.setData(comment: commentsList[indexPath.row])
         tableCellsHeight += cell.stackView.frame.height// + CGFloat(32)
-         self.tableHeightConstraint.constant = (tableCellsHeight)///2
-         self.view.layoutIfNeeded()
-         return cell
+        self.tableHeightConstraint.constant = (tableCellsHeight)///2
+        self.view.layoutIfNeeded()
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
-    
     
 }
